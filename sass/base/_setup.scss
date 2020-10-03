@@ -1,0 +1,30 @@
+*,
+*::before,
+*::after{
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+html{
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+body{
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.6rem;
+  line-height: 1.4;
+  background-color: $light-color-1;
+  color: $dark-color-1;
+  overflow-x: hidden;
+}
+ul{
+  list-style-type: none;
+}
+a{
+  text-decoration: none;
+}
+.container{
+  max-width: 130rem;
+  width: 90%;
+  margin: 0 auto;
+}

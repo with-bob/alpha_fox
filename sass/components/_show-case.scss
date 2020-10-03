@@ -1,0 +1,19 @@
+.carsoule{
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: url('/dist/images/hero1.jpg')no-repeat center center/cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  &__content{
+    background-color: lightblue;
+    margin-top: -10rem;
+    .lead{
+      width: 75%;
+    }
+  }
+}

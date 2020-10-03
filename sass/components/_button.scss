@@ -1,0 +1,22 @@
+.btn{
+  cursor: pointer;
+  display: inline-block;
+  font-size: 1.7rem;
+  font-weight: 500;
+  background-color: #fff;
+  color: set-text-color($dark-color-1);
+  padding: 1rem 2rem;
+  border: none;
+  outline: none;
+  transition: all .4s ease-in;
+
+  &.btn-primary{
+   background-image: $gradient;
+   background-size: 300%;
+   background-position: left;
+   transition: background-position .1s ease-in;
+    &:hover{
+      background-position: right;
+    }
+  }
+}

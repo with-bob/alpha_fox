@@ -1,0 +1,9 @@
+// .about{
+//   background-color: orangered;
+// }
+.services{
+  &__inner{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

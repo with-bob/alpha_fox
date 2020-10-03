@@ -4,7 +4,7 @@
   "description": "corporate simple pages",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node-sass -w sass/ -o dist/css/ --recursive"
   },
   "author": "Bob",
   "license": "MIT",
