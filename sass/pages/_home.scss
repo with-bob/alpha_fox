@@ -1,9 +1,81 @@
-// .about{
-//   background-color: orangered;
-// }
+.about{
+  background-color: set-background($light-color-1);
+  color: set-text-color($light-color-1);
+
+  &__showcase{
+    @include gird-2-col;
+    grid-column-gap: 6rem;
+    
+    div:last-child{
+      align-self: center;
+    }
+  }
+}
 .services{
+  background-color: $grey-color;
+  color: #222;
+  padding-top: 5rem;
   &__inner{
+    @include gird-2-col;
+    grid-gap: 4rem;
+  }
+  &__cards{
+    background-color: $light-color-1;
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: min-content 1fr;
+    grid-column-gap: 4rem;
+    border-radius: .4rem;
+    padding: 3rem;
+    box-shadow: 0 0 .6rem rgba(0, 0, 0, 0.2);
+    transition: all .4s ease-in;
+
+    &_icon, i, h3{
+      transition: all .4s ease;
+    }
+    &-icon{
+      @include center-h-v;
+      box-shadow: 0 0 .7rem rgba(0, 0, 0, 0.2);
+      width: 9rem;
+      height: 9rem;
+      border-radius: 100%;
+    }
+    i{
+      color: $dark-color-1;
+      font-size: 3rem;
+    }
+    h3{
+      font-size: 2rem;
+      font-weight: 700;
+      margin-bottom: 1.5rem;
+    }
+    &:hover .services__cards-icon{
+      background-color: $primary-color-dark;
+    }
+    &:hover i{
+      color: $light-color-1;
+    }
+    &:hover h3{
+      color: $secondary-color;
+    }
+  }
+  
+  &__banner{
+    background-color: $light-color-1;
+    &-grid{
+      @include gird-2-col;
+      grid-column-gap: 6rem;
+      img{
+        background-color: transparent;
+      }
+      div:first-child{
+        align-self: center;
+      }
+      h2{
+        margin-bottom: 2rem;
+      }
+      p{
+        margin-bottom: 3rem;
+      }
+    }
   }
 }

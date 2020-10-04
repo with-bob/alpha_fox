@@ -1,17 +1,27 @@
 //set text color based on backgeound
-@function set-text-color($color){
-  @if(lightness($color) > 60){
-    @return #000000;
+@function set-text-color($color) {
+  @if (lightness($color) > 40) {
+    @return #222;
   }@else{
-    @return #ffffff;
+    @return #fff;
   }
 }
 //set background text color
 @mixin set-background($color){
-  background-color: $color;
+  background: $color;
   color: set-text-color($color);
 }
 
 @mixin gradient {
   background-image: linear-gradient(to right bottom, $primary-color-dark, $primary-color-light);
+}
+
+@mixin center-h-v {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+@mixin  gird-2-col {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
 }

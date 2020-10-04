@@ -1,16 +1,27 @@
 .footer{
   background-color: $grey-color-0;
-  color: set-text-color($light-color-2);
+  color: set-text-color($dark-color-1);
   padding-top: 3rem;
  
   &__main{
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(26rem, 1fr));
     grid-gap: 5rem;
-
-    li{
-      line-height: 2.2;
+  
+    ul{
+      li{
+        line-height: 2.2;
+        a{
+          color: set-text-color($dark-color-2);
+          transition: all .4s ease;
+          &:hover{
+            color: $secondary-color;
+            text-decoration: underline;
+          }
+        }
+      }
     }
+    
     h2{
       margin-bottom: 1.5rem;
     }
@@ -33,7 +44,7 @@
       right: 0;
       bottom: 0;
       display: inline-block;
-      background-color: red;
+      background-color: $secondary-color;
       padding: .9rem;
       border-top-right-radius: 4px;
       border-bottom-right-radius: 4px;
@@ -50,6 +61,7 @@
     ul{
       display: flex;
       flex-wrap: wrap;
+      
       li{
         &:not(:last-child){
           margin-right: 1rem;
@@ -59,12 +71,48 @@
           }
         }
       }
+      li a{
+        color: set-text-color($dark-color-2);
+      }
     }
   }
   &__social{
     i{
       font-size: 3rem;
+      transition: color 0.4s ease;
     }
+      
+    i.fa-facebook{
+      color: #1877f2;
+      &:hover{
+        color: lighten(#1877f2, 20%);
+      }
+    }
+    i.fa-instagram{
+      color: #c32aa3;
+      &:hover{
+        color: lighten(#c32aa3, 20%);
+      }
+    }
+    i.fa-twitter{
+      color: #1da1f2;
+      &:hover{
+        color: lighten(#1da1f2, 20%);
+      }
+    }
+    i.fa-whatsapp{
+      color: #25d366;
+      &:hover{
+        color: lighten(#25d366, 20%);
+      }
+    } 
+    i.fa-linkedin{
+      color:  #007bb5;
+      &:hover{
+        color: lighten(#007bb5, 20%);
+      }
+    } 
+    
     @media (max-width: 500px) {
       margin-top: 1.5rem;
     }
@@ -77,3 +125,7 @@
     }
   }
 }
+
+
+
+   

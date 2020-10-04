@@ -2,5 +2,28 @@
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
   grid-gap: 5rem;
+  margin: 3rem 0 5rem 0;
+  .card{
+    padding: 3rem;
+    border-radius: .5rem;
+    box-shadow: 0 0 .5rem rgba(0, 0, 0, 0.1);
+    transition: box-shadow .4 ease;
+    color: set-text-color($light-color-1);
+    h3{
+      font-size: 2.4rem;
+    }
+    &__icons{
+      i{
+        margin: .5rem 0 2rem 0;
+        font-size: 5rem;
+        color: $secondary-color;
+      }
+    }
+
+    &:hover{
+      box-shadow: 0 0 1rem .3rem rgba($secondary-color, .3);
+    }
+  }
+  
 }
 

@@ -12,11 +12,24 @@
 
   &.btn-primary{
    background-image: $gradient;
+   color: $light-color-1;
    background-size: 300%;
    background-position: left;
    transition: background-position .1s ease-in;
     &:hover{
       background-position: right;
+    }
+  }
+  &.btn-cta{
+    padding: 0;
+    color: $secondary-color;
+    transition: all .4s ease;
+    border-bottom: 1px solid transparent;
+    &:hover i{
+      margin-left: .7rem;
+    }
+    &:hover {
+      border-bottom: 1px solid #333;
     }
   }
 }
