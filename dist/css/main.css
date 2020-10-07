@@ -94,6 +94,79 @@ a {
   width: 90%;
   margin: 0 auto; }
 
+.testimoninal {
+  background: linear-gradient(to right bottom, #183585, #0169AB);
+  color: #f7f7f7;
+  height: 50rem; }
+  .testimoninal h2 {
+    margin: 3rem 0; }
+
+.carsoule {
+  position: relative;
+  max-width: 66%;
+  width: 100%;
+  margin: 0 auto;
+  background-color: #f9f9f9;
+  color: #333; }
+  .carsoule__container {
+    position: relative;
+    width: 100%;
+    height: 100%; }
+  .carsoule__slider {
+    width: 100%;
+    height: 100%; }
+  .carsoule__content {
+    padding: 2rem 3rem 5rem;
+    text-align: center; }
+  .carsoule__pic {
+    margin-bottom: 2rem; }
+    .carsoule__pic img {
+      width: 12rem;
+      height: 12rem;
+      border-radius: 100%; }
+  .carsoule__text {
+    font-style: italic;
+    font-weight: 400;
+    margin-bottom: 2rem; }
+  .carsoule__control span {
+    cursor: pointer;
+    width: 3.5rem;
+    height: 3.5rem;
+    border-radius: 100%;
+    background-color: #f9f9f9;
+    box-shadow: 0 0 1rem rgba(51, 51, 51, 0.4);
+    display: flex;
+    align-items: center;
+    justify-content: center; }
+  .carsoule__control i {
+    color: #0169AB;
+    font-size: 1.8rem; }
+  .carsoule__control .arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%); }
+  .carsoule__control .arrow.left {
+    left: -2rem; }
+  .carsoule__control .arrow.right {
+    right: -2rem; }
+  .carsoule__track {
+    cursor: pointer;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 1.4rem;
+    display: flex; }
+    .carsoule__track .indicator {
+      width: 1.3rem;
+      height: 1.3rem;
+      border-radius: 100%;
+      background-color: #EF8354;
+      border: 2px solid #EF8354; }
+      .carsoule__track .indicator:not(:last-child) {
+        margin-right: 1rem; }
+    .carsoule__track .indicator.active {
+      background-color: transparent; }
+
 .btn {
   cursor: pointer;
   display: inline-block;
