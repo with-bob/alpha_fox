@@ -99,7 +99,25 @@ a {
   color: #f7f7f7;
   height: 50rem; }
   .testimoninal h2 {
-    margin: 3rem 0; }
+    position: relative;
+    margin: 3rem 0;
+    padding-bottom: 1.5rem; }
+    .testimoninal h2::before, .testimoninal h2::after {
+      content: "";
+      position: absolute;
+      display: inline-block; }
+    .testimoninal h2::before {
+      width: 15rem;
+      height: 1px;
+      background-color: #eee;
+      bottom: 0;
+      left: calc(50% - 7.5rem); }
+    .testimoninal h2::after {
+      background-color: #EF8354;
+      width: 6rem;
+      height: .4rem;
+      bottom: -1px;
+      left: calc(50% - 3rem); }
 
 .carsoule {
   position: relative;
@@ -150,11 +168,10 @@ a {
   .carsoule__control .arrow.right {
     right: -2rem; }
   .carsoule__track {
-    cursor: pointer;
     position: absolute;
+    bottom: 1rem;
     left: 50%;
     transform: translateX(-50%);
-    bottom: 1.4rem;
     display: flex; }
     .carsoule__track .indicator {
       width: 1.3rem;
@@ -166,6 +183,91 @@ a {
         margin-right: 1rem; }
     .carsoule__track .indicator.active {
       background-color: transparent; }
+
+.team {
+  height: 70rem;
+  background-color: #c9ced3;
+  padding: 4rem 0; }
+  .team h2 {
+    position: relative;
+    margin-bottom: 2rem;
+    padding-bottom: 2rem; }
+    .team h2::before, .team h2::after {
+      content: "";
+      position: absolute;
+      display: block; }
+    .team h2::before {
+      width: 12rem;
+      height: 1px;
+      background-color: #6E798D;
+      bottom: 1px;
+      left: calc(50% - 6rem); }
+    .team h2::after {
+      width: 5rem;
+      height: .3rem;
+      bottom: 0.5px;
+      left: calc(50% - 2.5rem);
+      background-color: #0169AB; }
+  .team__content {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-row-gap: 2rem;
+    grid-column-gap: 3rem; }
+    .team__content .card {
+      padding: 2.5rem;
+      display: flex;
+      background-color: #fff;
+      border-radius: .5rem;
+      transition: all .5s ease-in-out; }
+      .team__content .card__pic {
+        margin-right: 2rem; }
+        .team__content .card__pic img {
+          width: 15rem;
+          height: 15rem;
+          border-radius: 100%; }
+      .team__content .card__info {
+        display: flex;
+        flex-direction: column;
+        justify-content: center; }
+        .team__content .card__info h4 {
+          margin-bottom: .5rem; }
+        .team__content .card__info span {
+          display: inline-block;
+          position: relative;
+          font-size: 1.5rem;
+          font-weight: 500;
+          padding-bottom: .9rem; }
+          .team__content .card__info span::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            display: block;
+            width: 15%;
+            height: 1px;
+            background-color: #cbd6e9; }
+        .team__content .card__info span, .team__content .card__info p {
+          margin-bottom: .8rem; }
+      .team__content .card__social {
+        display: flex; }
+        .team__content .card__social li i {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          width: 3.5rem;
+          height: 3.5rem;
+          border-radius: 100%;
+          background: rgba(102, 102, 102, 0.2);
+          color: #0169AB;
+          font-size: 1.4rem;
+          transition: all .4s ease; }
+          .team__content .card__social li i:hover {
+            color: #fff;
+            background-color: #0169AB; }
+        .team__content .card__social li:not(:last-child) {
+          margin-right: 1rem; }
+      .team__content .card:hover {
+        transform: translateY(-10px); }
 
 .btn {
   cursor: pointer;
@@ -243,8 +345,35 @@ a {
       letter-spacing: 0.5px;
       width: 75%; }
 
+.banner {
+  position: relative;
+  background: url("/dist/images/banner.jpg") no-repeat center center/cover;
+  background-attachment: fixed;
+  width: 100%;
+  height: 55rem; }
+  .banner::before {
+    content: "";
+    position: absolute;
+    height: inherit;
+    width: 100%;
+    background: linear-gradient(to right bottom, rgba(24, 53, 133, 0.4), rgba(1, 105, 171, 0.4));
+    z-index: 1; }
+  .banner__content {
+    position: relative;
+    color: #fff;
+    height: 55rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    z-index: 2; }
+  .banner__header {
+    margin-bottom: 2rem; }
+  .banner__text {
+    width: 60%;
+    margin-bottom: 3rem; }
+
 .footer {
-  background-color: #0d2636;
+  background-color: #000E28;
   color: #fff;
   padding-top: 3rem; }
   .footer__main {

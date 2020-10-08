@@ -1,0 +1,108 @@
+.team{
+  height: 70rem;
+  background-color: $grey-color;
+  padding: 4rem 0;
+
+  h2{
+    position: relative;
+    margin-bottom: 2rem;
+    padding-bottom: 2rem;
+    &::before,
+    &::after{
+      content: "";
+      position: absolute;
+      display: block;
+    }
+    &::before{
+      width: 12rem;
+      height: 1px;
+      background-color: $grey-color-3;
+      bottom: 1px;
+      left: calc(50% - 6rem);
+    }
+    &::after{
+      width: 5rem;
+      height: .3rem;
+      bottom: 0.5px;
+      left: calc(50% - 2.5rem);
+      background-color: $primary-color-light;
+    }
+  }
+  &__content{
+    @include gird-2-col;
+    grid-row-gap: 2rem;
+    grid-column-gap: 3rem;
+    .card{
+      padding: 2.5rem;
+      display: flex;
+      background-color: $light-color-1;
+      border-radius: .5rem;
+      transition: all .5s ease-in-out;
+      &__pic{
+        margin-right: 2rem;
+        img{
+          width: 15rem;
+          height: 15rem;
+          border-radius: 100%;
+        }
+      }
+      &__info{
+        @include col-center-h-v;
+        h4{
+          margin-bottom: .5rem;
+        }
+        span{
+          display: inline-block;
+          position: relative;
+          font-size: 1.5rem;
+          font-weight: 500;
+          padding-bottom: .9rem;
+          &::after{
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            display: block;
+            width: 15%;
+            height: 1px;
+            background-color: #cbd6e9;
+
+          }
+        }
+        span, p{
+          margin-bottom: .8rem;
+        }
+        
+      }
+      &__social{
+        display: flex;
+        li {
+          i{
+          @include center-h-v;
+            width: 3.5rem;
+            height: 3.5rem;
+            border-radius: 100%;
+            background: rgba($dark-color-2, .2);
+            color: $primary-color-light;
+            font-size: 1.4rem;
+            transition: all .4s ease;
+
+            &:hover{
+            color: $light-color-1;
+            background-color: $primary-color-light;
+          }
+          }
+          
+        }
+        li{
+          &:not(:last-child){
+            margin-right: 1rem;
+          }
+        }
+      }
+      &:hover{
+        transform: translateY(-10px);
+      }
+    }
+  }
+}

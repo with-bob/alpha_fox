@@ -24,7 +24,7 @@
 @mixin col-center-h-v {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  // align-items: center;
   justify-content: center;
 }
 @mixin  gird-2-col {
