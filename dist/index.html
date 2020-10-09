@@ -4,13 +4,13 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>SimpleDot</title>
-  <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,700;1,500&family=Montserrat:ital,wght@0,200;0,300;0,400;1,300&display=swap" rel="stylesheet"> 
+  <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;500;600;700&family=Montserrat:ital,wght@0,300;0,400;0,500;1,300;1,400;1,600&display=swap" rel="stylesheet">  
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"/>
   <link rel="shortcut / icon" href="../dist/images/favicon.ico">
   <link rel="stylesheet" href="../dist/css/main.css">
 </head>
 <body>
-  <header class="header">
+  <header class="header" id="header">
     <div class="container">
       <nav class="main-nav">
         <div class="main-nav__logo">
@@ -32,7 +32,7 @@
       </nav>
     </div>
   </header>
-  <section class="showcase">
+  <section class="showcase" id="showcase">
     <div class="container">
       <div class="showcase__content">
         <h1 class="primary__heading">
@@ -191,99 +191,6 @@
       </div>
   </div>
   </section>
-  <section class="testimoninal">
-    <div class="center__title">
-      <h2 class="primary__heading">Testimonial</h2>
-    </div>
-    <div class="container">
-      <div class="carsoule">
-        <div class="carsoule__container" id="carsoule__container">
-          <!-- slider 01 -->
-          <div class="carsoule__slider active">
-            <div class="carsoule__content">
-              <div class="carsoule__pic">
-                <img src="./images/testimonial-1.jpeg" alt="testimonial-1">
-              </div>
-              <p class="carsoule__text">
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tenetur, eos! Porro corrupti iusto aliquid nobis similique, magnam labore saepe ea molestias accusantium quibusdam!
-              </p>
-              <p class="carsoule-caption">- Jain Doe</p>
-            </div>
-          </div>
-          <!-- slider 02 -->
-          <div class="carsoule__slider">
-            <div class="carsoule__content">
-              <div class="carsoule__pic">
-                <img src="./images/testimonial-2.jpg" alt="testimonial-2">
-              </div>
-              <p class="carsoule__text">
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tenetur, eos! Porro corrupti iusto aliquid nobis similique, magnam labore saepe ea molestias accusantium quibusdam!
-              </p>
-              <p class="carsoule-caption">- Jain Doe</p>
-            </div>
-          </div>
-          <!-- slider 03 -->
-          <div class="carsoule__slider">
-            <div class="carsoule__content">
-              <div class="carsoule__pic">
-                <img src="./images/testimonial-3.jpeg" alt="testimonial-3">
-              </div>
-              <p class="carsoule__text">
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tenetur, eos! Porro corrupti iusto aliquid nobis similique, magnam labore saepe ea molestias accusantium quibusdam!
-              </p>
-              <p class="carsoule-caption">- Jain Doe</p>
-            </div>
-          </div>
-          <!-- slider 04 -->
-          <div class="carsoule__slider">
-            <div class="carsoule__content">
-              <div class="carsoule__pic">
-                <img src="./images/testimonial-4.jpg" alt="testimonial-4">
-              </div>
-              <p class="carsoule__text">
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tenetur, eos! Porro corrupti iusto aliquid nobis similique, magnam labore saepe ea molestias accusantium quibusdam!
-              </p>
-              <p class="carsoule-caption">- Jain Doe</p>
-            </div>
-          </div>
-          <!-- slider 05 -->
-          <div class="carsoule__slider">
-            <div class="carsoule__content">
-              <div class="carsoule__pic">
-                <img src="./images/testimonial-5.jpg" alt="testimonial-5">
-              </div>
-              <p class="carsoule__text">
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tenetur, eos! Porro corrupti iusto aliquid nobis similique, magnam labore saepe ea molestias accusantium quibusdam!
-              </p>
-              <p class="carsoule-caption">- Jain Doe</p>
-            </div>
-          </div>
-          <!-- slider 06 -->
-          <div class="carsoule__slider">
-            <div class="carsoule__content">
-              <div class="carsoule__pic">
-                <img src="./images/testimonial-6.jpg" alt="testimonial-6">
-              </div>
-              <p class="carsoule__text">
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tenetur, eos! Porro corrupti iusto aliquid nobis similique, magnam labore saepe ea molestias accusantium quibusdam!
-              </p>
-              <p class="carsoule-caption">- Jain Doe</p>
-            </div>
-          </div>
-          <!-- end of slider -->
-        </div>
-        <div class="carsoule__control">
-          <span class="arrow left" id="prev"><i class="fas fa-chevron-left"></i></span>
-          <span class="arrow right" id="next"><i class="fas fa-chevron-right"></i></span>
-        </div>
-        <div class="carsoule__track" id="carsoule__track">
-          <div class="indicator active"></div>
-          <div class="indicator"></div>
-          <div class="indicator"></div>
-        </div>
-      </div>
-    </div>
-  </section>
   <section class="banner">
     <div class="container">
       <div class="banner__content">
@@ -297,6 +204,69 @@
           <button class="btn btn-primary">Try Free Trail</button>
         </div>
       </div>
+    </div>
+  </section>
+  <section class="testimonial">
+    
+    <div class="carsoule">
+      <div class="center__title">
+        <h3 class="tertiary__heading">Trusted by over 50,000 people of the world's leading company's</h3>
+      </div>
+      <div class="carsoule__container" id="carsoule__container">
+        <!-- slider 01 -->
+        <div class="carsoule__slider">
+          <div class="carsoule__content">
+            <div class="carsoule__content-text">
+              <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quaerat cupiditate sint magnam rerum eum quasi, qui voluptatum, facilis illum.</p>
+            </div>
+            <div class="carsoule__content-pic">
+              <img src="./images/testimonial-1.jpeg" alt="testimonial-1">
+              <div>
+                <h4>Jain Doe</h4>
+                <p>UI & Ux Design</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- slider 02 -->
+        <div class="carsoule__slider">
+          <div class="carsoule__content">
+            <div class="carsoule__content-text">
+              <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quaerat cupiditate sint magnam rerum eum quasi, qui sapiente, consequuntur facilis illum.</p>
+            </div>
+            <div class="carsoule__content-pic">
+              <img src="./images/testimonial-1.jpeg" alt="testimonial-1">
+              <div>
+                <h4>John Doe</h4>
+                <p>UI & Ux Design</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- slider 03 -->
+        <div class="carsoule__slider active">
+          <div class="carsoule__content">
+            <div class="carsoule__content-text">
+              <p>Lorem ipsum, dolor sit amet consectetur Quaerat cupiditate sint magnam rerum eum quasi, qui sapiente, consequuntur voluptatum, facilis illum.</p>
+            </div>
+            <div class="carsoule__content-pic">
+              <img src="./images/testimonial-1.jpeg" alt="testimonial-1">
+              <div>
+                <h4>Adam hussin</h4>
+                <p>UI & Ux Design</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- slider 04 -->
+      </div>
+    <div class="carsoule__control">
+      <span class="arrow left" id="prev"><i class="fas fa-chevron-left"></i></span>
+      <span class="arrow right" id="next"><i class="fas fa-chevron-right"></i></span>
+    </div>
+    <ul class="carsoule__track">
+
+    </ul>
     </div>
   </section>
   <section class="team">
@@ -382,6 +352,80 @@
       </div>
     </div>
   </section>
+  <section class="section-accordion">
+    <div class="container">
+      <div class="center__title">
+        <h1 class="secondary__heading">Freqently asked questions</h1>
+      </div>
+      <ul class="accordion">
+        <li class="accordion__item">
+          <h4 class="accordion__item-header">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+          </h4>
+          <div class="accordion__item-body">
+            <div class="accordion__item-body-content">
+              <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Itaque et sapiente nobis numquam natus qui voluptate animi maiores, officia illum incidunt quo, earum, totam quidem. Perferendis, provident.</p>
+            </div>
+          </div>
+        </li>
+
+        <li class="accordion__item">
+          <h4 class="accordion__item-header">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi, architecto?
+          </h4>
+          <div class="accordion__item-body">
+            <div class="accordion__item-body-content">
+              <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Itaque et sapiente nobis numquam natus qui voluptate animi maiores, officia illum incidunt quo, earum, totam quidem. Perferendis, provident.</p>
+            </div>
+          </div>
+        </li>
+
+        <li class="accordion__item">
+          <h4 class="accordion__item-header">
+            Lorem, ipsum dolor sit amet consectetur adipisicing sit amet
+          </h4>
+          <div class="accordion__item-body">
+            <div class="accordion__item-body-content">
+              <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Itaque et sapiente nobis numquam natus qui voluptate animi maiores, officia illum incidunt quo, earum, totam quidem. Perferendis, provident.</p>
+            </div>
+          </div>
+        </li>
+
+        <li class="accordion__item">
+          <h4 class="accordion__item-header">
+            Lorem, ipsum dolor sit amet consectetur adipisicing
+          </h4>
+          <div class="accordion__item-body">
+            <div class="accordion__item-body-content">
+              <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Itaque et sapiente nobis numquam natus qui voluptate animi maiores, officia illum incidunt quo, earum, totam quidem. Perferendis, provident.</p>
+            </div>
+          </div>
+        </li>
+
+        <li class="accordion__item">
+          <h4 class="accordion__item-header">
+            Lorem, ipsum sit amet consectetur adipisicing officia illum
+          </h4>
+          <div class="accordion__item-body">
+            <div class="accordion__item-body-content">
+              <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Itaque et sapiente nobis numquam natus qui voluptate animi maiores, officia illum incidunt quo, earum, totam quidem. Perferendis, provident.</p>
+            </div>
+          </div>
+        </li>
+
+        <li class="accordion__item">
+          <h4 class="accordion__item-header">
+            Lorem, ipsum dolor sit amet consectetur adipisicing
+          </h4>
+          <div class="accordion__item-body">
+            <div class="accordion__item-body-content">
+              <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Itaque et sapiente nobis numquam natus qui voluptate animi maiores, officia illum incidunt quo, earum, totam quidem. Perferendis, provident.</p>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </section>
   <!-- 
   <section class="Gallery"></section>
   <section class="contact"></section> -->
@@ -447,3 +491,4 @@
   <script type="text/javascript" src="../dist/js/main.js"></script>
 </body>
 </html>
+

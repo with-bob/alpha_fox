@@ -1,121 +1,101 @@
-.testimoninal{
-  background: $gradient;
-  color: #f7f7f7;
-  height: 50rem;
-  h2{
-    position: relative;
-    margin: 3rem 0;
-    padding-bottom: 1.5rem;
-    &::before,
-    &::after{
-      content: "";
-      position: absolute;
-      display: inline-block;
-    }
-    &::before{
-      width: 15rem;
-      height: 1px;
-      background-color: #eee;
-      bottom: 0;
-      left: calc(50% - 7.5rem);
-    }
-    &::after{
-      background-color: $secondary-color;
-      width: 6rem;
-      height: .4rem;
-      bottom: -1px;
-      left: calc(50% - 3rem);
-    }
-  }
+.testimonial{
+  max-width: 100rem;
+  width: 90%;
+  margin: 0 auto;
+  height: 45rem;
 }
 .carsoule{
   position: relative;
-  max-width: 66%;
   width: 100%;
-  margin: 0 auto;
-  background-color: #f9f9f9;
-  color: $dark-color-1;
-  &__container{
-    position: relative;
-    width: 100%;
-    height: 100%;
-  }
-  &__slider{
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    opacity: 0;
-    visibility: hidden;
-    z-index: 1;
-    &.active{
-      opacity: 1;
-      visibility: visible;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+
+  .center__title{
+    margin-top: 6rem;
+    h3{
+      text-transform: uppercase;
+      font-size: 1.5rem;
+      font-weight: 400;
+      text-align: center;
     }
-  }
-  &__content{
-    padding: 2rem 3rem 5rem;
-    text-align: center;
-  }
-  &__pic{
-    margin-bottom: 2rem;
-    img{
-      width: 12rem;
-      height: 12rem;
-      border-radius: 100%;
-    }
-  }
-  &__text{
-    font-style: italic;
-    font-weight: 400;
-    margin-bottom: 2rem;
   }
   &__control{
-    span{
-      cursor: pointer;
-      width: 3.5rem;
-      height: 3.5rem;
-      border-radius: 100%;
-      background-color: #f9f9f9;
-      box-shadow: 0 0 1rem rgba($dark-color-1, .4);
-      @include center-h-v;
-    }
-    i{
-      color: $primary-color-light;
-      font-size: 1.8rem;
-    }
     .arrow{
       position: absolute;
       top: 50%;
       transform: translateY(-50%);
     }
     .arrow.left{
-      left: -2rem;
+      left: 0;
     }
     .arrow.right{
-      right: -2rem;
+      right: 0;
     }
   }
-  
   &__track{
     position: absolute;
-    bottom: 1rem;
+    bottom: 3.5rem;
     left: 50%;
     transform: translateX(-50%);
     display: flex;
-  
     .indicator{
-      &:not(:last-child){
-        margin-right: 1rem;
-      }
       width: 1.3rem;
       height: 1.3rem;
+      background-color: #333;
+      border: 2px solid #333;
       border-radius: 100%;
-      background-color: $secondary-color;
-      border: 2px solid $secondary-color;
+      &:not(:last-child){
+        margin-right: .8rem;
+      }
     }
     .indicator.active{
       background-color: transparent;
     }
   }
+  &__container{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: all .5s ease-in-out;
+  }
+  &__slider{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+  }
+  &__content{
+    padding: 2rem 4rem;
+    margin-top: 4rem;
+    &-text{
+      font-size: 2rem;
+      font-style: italic;
+      font-weight: 600;
+      text-align: center;
+      margin-bottom: 4rem;
+    }
+    &-pic{
+      display: flex;
+      justify-content: center;
+      div{
+        align-self: center;
+        h4{
+          margin-bottom: .6rem;
+        }
+        p{
+          letter-spacing: 1px;
+        }
+      }
+      img{
+        margin-right: 2rem;
+        width: 6rem;
+        height: 6rem;
+        border-radius: 100%;
+      }
+    }
+  }
+  
 }
-

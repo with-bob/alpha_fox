@@ -1,56 +1,92 @@
+.menu_toggle{
+  width: 4.5rem;
+  height: 4.5rem;
+  background-color: #fff;
+}
+
 .header{
+  $text: $light-color-1;
+  $text-inverse: $dark-color-1;
+  $background: transparent;
+
   position: fixed;
+  top: 0;
+  left: 0;
   width: 100%;
   z-index: 20;
-}
-.main-nav{
-  height: 6rem;
-  display: flex;
-  align-items: center;
-  &__logo{
-    a{
-      color: $light-color-1;
-      font-size: 3rem;
-      font-family: 'Josefin Sans', sans-serif;
-    }
+  background-color: $background;
+  color: $text;
+  padding: 0;
+
+  &.white_bg{
+    background-color: #f4f4f4;
+    color: #222;
+    box-shadow: 0 .4rem .8rem rgba($dark-color-1, .2);
+    transition: background .4s ease;
+    padding: .5rem 0;
   }
-  &__lists{
+
+
+  .main-nav{
+    height: 6rem;
     display: flex;
-    flex-grow: 1;
-    li:nth-of-type(1),
-    li:nth-of-type(6){
+    align-items: center;
+    &__logo{
+      a{
+        color: currentColor;
+        font-size: 3rem;
+        font-family: 'Josefin Sans', sans-serif;
+      }
+    }
+    &__lists{
+      display: flex;
+      flex-grow: 1;
+      li:nth-of-type(1),
+      li:nth-of-type(6){
+        margin-left: auto;
+      }
+     }
+    &__items{
+      margin-right: 2rem;
+      &:last-child a{
+        color: currentColor;
+      }
+    }
+    &__links{
+      &:link,
+      &:visited{
+        position: relative;
+        color: inherit;
+        font-size: 1.4rem;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        font-weight: 700;
+        padding: .3rem;
+        outline: none;
+        transition: al .4s ease-out;
+      }
+      &:after{
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: -5px;
+        background-color: currentColor;
+        height: 2px;
+        width: 100%;
+        transform: scaleX(0);
+        transition: all .3s ease-in;
+      }
+      &:hover::after{
+        transform: scaleX(1);
+      }
+      // a:last-child{
+      //   color: set-text-color($dark-color-1);
+      // }
+    }
+    &__cta{
       margin-left: auto;
     }
-   }
-  &__items{
-    margin-right: 2rem;
-    &:last-child a{
-      color: $light-color-1;
-    }
   }
-  &__links{
-    &:link,
-    &:visited{
-      color: $light-color-1;
-      font-size: 1.4rem;
-      text-transform: uppercase;
-      letter-spacing: 1px;
-      font-weight: 700;
-      padding: .3rem;
-      outline: none;
-      transition: al .4s ease-out;
-    }
-    &:hover,
-    &:active,
-    &:focus{
-      color: $light-color-3;
-      border-bottom: 2px solid $light-color-3;
-    }
-    a:last-child{
-      color: #fff;
-    }
-  }
-  &__cta{
-    margin-left: auto;
-  }
+  
 }
+
