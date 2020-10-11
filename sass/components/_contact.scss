@@ -1,0 +1,124 @@
+.contact{
+  background-color: $grey-color;
+  padding-top: 4rem;
+  h1{
+    margin-bottom: 4rem;
+    padding-bottom: 2rem;
+  }
+  &__contents{
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-column-gap: 8rem;
+    margin-bottom: 4rem;
+    @include respond(phone){
+      grid-template-columns: 1fr;
+      grid-row-gap: 5rem;
+    }
+  }
+  &__details{
+
+    i{
+      font-size: 2rem;
+      margin-right: 3rem;
+      height: 5rem;
+      width: 5rem;
+      border-radius: 100%;
+      background-color: $primary-color-light;
+      color: $light-color-2;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    h3{
+      font-size: 1.4rem;
+      font-weight: bold;
+      margin-bottom: .7rem;
+    }
+    p{
+      font-size: 1.4rem;
+    }
+    div:not(:last-child){
+      margin-bottom: 1rem;
+    }
+    .location,
+    .email, 
+    .phone{
+      display: flex;
+      align-items: center;
+    }
+  }
+
+  &__form{
+    .form{
+      width: 100%;
+
+      .row-one{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-column-gap: 2rem;
+        @media screen and(max-width: 37.5em) {
+          grid-template-columns: 1fr;
+          &__group{
+            margin-bottom: 2rem;
+          }
+        }
+      }
+
+      textarea{
+        width: 100%;
+        height: 10rem;
+      }
+
+      &__group{
+        &:not(:last-child){
+          margin-bottom: 2rem;
+        }
+        @include respond (phone){
+          margin-bottom: 1.5rem;
+        }
+      }
+      &__input{
+        border: 1px solid #dfdcdc;
+        border-radius: .4rem;
+        border-radius: 4px;
+        padding: 1.4rem 1.6rem;
+        width: 100%;
+        font-family: inherit;
+        transition: border-bottom .3s cubic-bezier(0.54, -0.81, 0.57, 0.57);
+
+        &:focus{
+          outline: none;
+          box-shadow: 0 .6rem .7rem rgba($dark-color-2, .1);
+        }
+
+        &::-webkit-input-placeholder{
+          color: $grey-color-3;
+        }
+      }
+
+      &__label{
+        display: block;
+        font-family: inherit;
+        margin-top: .6rem;
+        margin-left: 1.6rem;
+        color: $grey-color-0;
+        transition: transform 0.4s ease-out;
+      }
+
+      .form__input:placeholder-shown + .form__label{
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(-.4rem);
+      }
+      
+    }
+  }
+  &__map{
+    iframe{
+      margin-bottom: -.4rem;
+      width: 100%;
+      height: 40rem;
+      object-fit: cover;
+    }
+  }
+}

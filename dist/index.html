@@ -29,6 +29,12 @@
         <div class="main-nav__cta">
           <button class="btn btn-primary"><i class="fas fa-sign-in-alt"></i> Sign Up</button>
         </div>
+
+        <div class="menuToggler" id="menu_toggler">
+          <div class="bar half start"></div>
+          <div class="bar middle"></div>
+          <div class="bar half end"></div>
+        </div>
       </nav>
     </div>
   </header>
@@ -232,13 +238,13 @@
         <div class="carsoule__slider">
           <div class="carsoule__content">
             <div class="carsoule__content-text">
-              <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quaerat cupiditate sint magnam rerum eum quasi, qui sapiente, consequuntur facilis illum.</p>
+              <p>Lorem ipsum, dolor sit amet magnam rerum eum quasi consectetur adipisicing elit. Quaerat cupiditate sint magnam rerum eum quasi, qui sapiente, consequuntur facilis illum.</p>
             </div>
             <div class="carsoule__content-pic">
-              <img src="./images/testimonial-1.jpeg" alt="testimonial-1">
+              <img src="./images/testimonial-2.jpg" alt="testimonial-2">
               <div>
                 <h4>John Doe</h4>
-                <p>UI & Ux Design</p>
+                <p>Designer</p>
               </div>
             </div>
           </div>
@@ -250,19 +256,49 @@
               <p>Lorem ipsum, dolor sit amet consectetur Quaerat cupiditate sint magnam rerum eum quasi, qui sapiente, consequuntur voluptatum, facilis illum.</p>
             </div>
             <div class="carsoule__content-pic">
-              <img src="./images/testimonial-1.jpeg" alt="testimonial-1">
+              <img src="./images/testimonial-3.jpeg" alt="testimonial-1">
               <div>
                 <h4>Adam hussin</h4>
-                <p>UI & Ux Design</p>
+                <p>Photo Editor</p>
               </div>
             </div>
           </div>
         </div>
         <!-- slider 04 -->
+        <div class="carsoule__slider">
+          <div class="carsoule__content">
+            <div class="carsoule__content-text">
+              <p>Lorem ipsum, dolor sit amet consectetur Quaerat cupiditate sint magnam rerum eum quasi, qui sapiente, consequuntur voluptatum, facilis illum.</p>
+            </div>
+            <div class="carsoule__content-pic">
+              <img src="./images/testimonial-4.jpg" alt="testimonial-1">
+              <div>
+                <h4>Lil brown</h4>
+                <p>Company CEO</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- slider 05 -->
+        <div class="carsoule__slider">
+          <div class="carsoule__content">
+            <div class="carsoule__content-text">
+              <p>Lorem ipsum, dolor sit amet consectetur Quaerat cupiditate sint magnam rerum eum quasi, qui sapiente, consequuntur voluptatum, facilis illum.</p>
+            </div>
+            <div class="carsoule__content-pic">
+              <img src="./images/testimonial-6.jpg" alt="testimonial-1">
+              <div>
+                <h4>Rihanna ram</h4>
+                <p>Cheif Director</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- slider 05 -->
       </div>
     <div class="carsoule__control">
-      <span class="arrow left" id="prev"><i class="fas fa-chevron-left"></i></span>
-      <span class="arrow right" id="next"><i class="fas fa-chevron-right"></i></span>
+      <span class="arrow left" id="prev"><i class="fas fa-arrow-left"></i></span>
+      <span class="arrow right" id="next"><i class="fas fa-arrow-right"></i></span>
     </div>
     <ul class="carsoule__track">
 
@@ -298,7 +334,7 @@
         <!-- 2 -->
         <div class="card">
           <div class="card__pic">
-            <img src="./images/team-2.jpg" alt="team">
+            <img src="./images/team-1.jpg" alt="team">
           </div>
           <div class="card__info">
             <h4 class="tertiary__heading">William Adam</h4>
@@ -316,7 +352,7 @@
         <!-- 3 -->
         <div class="card">
           <div class="card__pic">
-            <img src="./images/team-2.jpg" alt="team">
+            <img src="./images/team-3.jpg" alt="team">
           </div>
           <div class="card__info">
             <h4 class="tertiary__heading">William Adam</h4>
@@ -334,7 +370,7 @@
         <!-- 4 -->
         <div class="card">
           <div class="card__pic">
-            <img src="./images/team-2.jpg" alt="team">
+            <img src="./images/team-4.jpg" alt="team">
           </div>
           <div class="card__info">
             <h4 class="tertiary__heading">William Adam</h4>
@@ -426,9 +462,69 @@
       </ul>
     </div>
   </section>
-  <!-- 
-  <section class="Gallery"></section>
-  <section class="contact"></section> -->
+  <section class="contact">
+    <div class="center__title">
+      <h1 class="secondary__heading">
+        contact us
+      </h1>
+    </div>
+    <div class="container">
+      <div class="contact__contents">
+        <div class="contact__details">
+          <div class="location">
+            <i class="far fa-map"></i>
+            <div>
+              <h3>Location</h3>
+              <p>A 104 George Street, Beenleigh QLD</p>
+            </div>
+          </div>
+          <div class="email">
+            <i class="far fa-envelope"></i> 
+            <div>
+              <h3>Email</h3>
+              <p>example@gamil.com</p>
+            </div>
+          </div>
+          <div class="phone">
+            <i class="fas fa-phone-alt"></i>
+            <div>
+              <h3>Phone</h3>
+              <p>(+61) 1800 45 645</p>
+            </div>
+          </div>
+        </div>
+          <div class="contact__form">
+            <form class="form">
+              <div class="row-one">
+                <div class="form__group">
+                  <input type="text" class="form__input" placeholder="First Name">
+                  <label for="firstName" class="form__label">First Name</label>
+                </div>
+              
+                <div class="form__group">
+                  <input type="text" class="form__input" placeholder="Last Name">
+                  <label for="lastName" class="form__label">Last Name</label>
+                </div>
+              </div>
+                <div class="form__group">
+                  <input type="email" class="form__input" placeholder="Email Address">
+                  <label for="email" class="form__label">Email Address</label>
+                </div>
+              <div class="form__group">
+                <textarea cols="30" rows="5" placeholder="Your Messages Here Please ..."></textarea>
+              </div>
+              <button class="btn btn-submit">Send Your Message</button>
+            </form>
+          </div>
+      </div>
+      <!-- contact content end -->
+    </div>
+    <!-- container end -->
+    <!-- contact map -->
+    <div class="contact__map">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3532.044637613449!2d153.19883701521184!3d-27.715908033854557!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6b9141d5696a638f%3A0xc9924ae619d4e49b!2sGeorge%20St%2C%20Beenleigh%20QLD%204207!5e0!3m2!1sen!2sau!4v1600171165345!5m2!1sen!2sau" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+    </div>
+  </section>
   <footer class="footer">
     <div class="footer__inner">
       <div class="container">

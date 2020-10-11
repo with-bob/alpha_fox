@@ -8,28 +8,38 @@
   padding: 1rem 2rem;
   border: none;
   outline: none;
-  transition: all .4s ease-in;
+  transition: all .3s ease-in;
 
   &.btn-primary{
-   background-image: $gradient;
-   color: $light-color-1;
-   background-size: 300%;
-   background-position: left;
-   transition: background-position .1s ease-in;
+    border:  2px solid $primary-color-light;
+    background: $primary-color-light;
     &:hover{
-      background-position: right;
+      background: transparent;
+      border:  2px solid $primary-color-light;
     }
   }
   &.btn-cta{
-    padding: 0;
-    color: $secondary-color;
-    transition: all .4s ease;
-    border-bottom: 1px solid transparent;
+    border: 2px solid $primary-color-light;
+    background-color: transparent;
+    color: $dark-color-2;
     &:hover i{
-      margin-left: .7rem;
+      margin-left: .1rem;
     }
     &:hover {
-      border-bottom: 1px solid #333;
+      background-color: $primary-color-light;
+      color: $light-color-1;
+    }
+  }
+  &.btn-submit{
+    border:  2px solid $primary-color-light;
+    background: $primary-color-light;
+    @include respond(phone){
+      width: 100%;
+    }
+    &:hover{
+      background: transparent;
+      border:  2px solid $primary-color-light;
+      color: $dark-color-1;
     }
   }
 }

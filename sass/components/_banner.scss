@@ -27,5 +27,8 @@
   &__text{
     width: 60%;
     margin-bottom: 3rem;
+    @include respond(phone){
+      width: 100%;
+    }
   }
 }

@@ -37,11 +37,12 @@
   margin: 0 auto;
 
   &__item{
-   background: $gradient;
     &:not(:last-child){
       margin-bottom: 2rem;
     }
     &-header{
+      border: 2px solid $primary-color-dark;
+      border-radius: 5rem;
       max-height: 6rem;
       line-height: 1.5rem;
       display: flex;
@@ -69,8 +70,11 @@
       transition: all .4s ease-in-out;
       &-content{
         padding: 2rem;
-        border-top: 3px solid;
         background: $light-color-1;
+        p{
+          border-left: 3px solid $dark-color-3;
+          padding-left: 1rem;
+        }
       }
     }
 

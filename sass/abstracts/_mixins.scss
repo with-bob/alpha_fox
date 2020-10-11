@@ -30,4 +30,41 @@
 @mixin  gird-2-col {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
+  @include respond(phone){
+    grid-template-columns: 1fr;
+  }
+}
+
+// 1 em = 16px
+//media queries managment
+/*
+0 -600px phone
+600 - 900 tablet portrait
+900 - 1200 tablet landscape
+1200 - 1800 is normal style applu
+*/
+
+/*
+breakpoint arguement 
+-phone 600px
+-tab-port 900px
+-tab-land 1200px
+-big-desktop 1800px
+*/
+@mixin respond ($breakPoint) {
+  @if $breakPoint == phone{
+    @media (max-width: 47.5em) {@content};
+  }
+
+  @if $breakPoint == tab_port {
+    @media (max-width: 56.25em) {@content};
+  }
+
+  @if $breakPoint == tab_land {
+    @media (max-width: 75em) {@content};
+}
+
+@if $breakPoint == big__desktop {
+  @media (min-width: 112.5em) {@content};
+}
 }

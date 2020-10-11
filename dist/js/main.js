@@ -1,3 +1,12 @@
+(function(){
+  const menu_toggler = document.getElementById('menu_toggler');
+  const nav = document.querySelector('.main-nav__lists');
+  menu_toggler.addEventListener('click', function(){
+    menu_toggler.classList.toggle('change')
+    nav.classList.toggle('change')
+  });
+})();
+
 (function () {
   const carsoule_container = document.getElementById("carsoule__container");
   const carsoule_sliders = document.querySelectorAll(".carsoule__slider");

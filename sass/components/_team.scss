@@ -1,13 +1,16 @@
 .team{
-  height: 70rem;
+  height: auto;
   background-color: $grey-color;
   padding: 4rem 0;
   backface-visibility: hidden;
-
+  @include respond(tab_port){
+    padding-bottom: 6rem;
+  }
   h2{
     position: relative;
     margin-bottom: 2rem;
     padding-bottom: 2rem;
+    
     &::before,
     &::after{
       content: "";
@@ -39,18 +42,29 @@
       background-color: $light-color-1;
       border-radius: .5rem;
       transition: all .5s ease-in-out;
+      @include respond(tab_port){
+        padding: 2rem;
+      }
       &__pic{
         margin-right: 2rem;
         img{
           width: 15rem;
           height: 15rem;
           border-radius: 100%;
+          @include respond(tab_port){
+            margin-top: 1rem;
+            width: 13rem;
+            height: 13rem;
+          }
         }
       }
       &__info{
         @include col-center-h-v;
         h4{
           margin-bottom: .5rem;
+          @include respond(tab_port){
+            margin-bottom: .3rem;
+          }
         }
         span{
           display: inline-block;
@@ -58,6 +72,9 @@
           font-size: 1.5rem;
           font-weight: 500;
           padding-bottom: .9rem;
+          @include respond(tab_port){
+            padding-bottom: .5rem;
+          }
           &::after{
             content: "";
             position: absolute;

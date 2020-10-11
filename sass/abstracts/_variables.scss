@@ -1,10 +1,12 @@
-$primary-color-dark: #183585;
-$primary-color-light: #0169AB;
+$primary-color-dark: #045CB4;
+$primary-color-light: #0470DC;
 $gradient: linear-gradient(to right bottom, $primary-color-dark, $primary-color-light);
-$secondary-color: #EF8354;
+$secondary-color: #E76F51;
 
 $dark-color-1: #333;
 $dark-color-2: #666;
+$dark-color-3: #999;
+$dark-color-4: rgb(167, 164, 164);
 
 
 $light-color-1: #fff;
@@ -18,4 +20,11 @@ $grey-color-2: #5F6C82;
 $grey-color-3: #6E798D;
 
 $grey-color: #c9ced3;
+
+// gradient color accent
+$title-color-1: #002B4A;
+$title-color-2: #0787b6;
+$title-color-3: #00476D;
+$title-color-4: #06759b;
+$title-gradient: linear-gradient(to right, $title-color-3, $title-color-1, $title-color-2, $title-color-4);
 
