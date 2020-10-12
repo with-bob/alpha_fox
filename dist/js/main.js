@@ -7,6 +7,7 @@
   });
 })();
 
+
 (function () {
   const carsoule_container = document.getElementById("carsoule__container");
   const carsoule_sliders = document.querySelectorAll(".carsoule__slider");

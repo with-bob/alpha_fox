@@ -96,8 +96,7 @@ body {
   font-size: 1.6rem;
   line-height: 1.4;
   background-color: #fff;
-  color: #333;
-  overflow-x: hidden; }
+  color: #333; }
 
 img {
   width: 100%; }
@@ -114,7 +113,8 @@ a {
   margin: 0 auto; }
 
 .testimonial {
-  max-width: 100rem;
+  position: relative;
+  max-width: 120rem;
   width: 90%;
   margin: 0 auto;
   height: 45rem; }
@@ -123,30 +123,28 @@ a {
   position: relative;
   width: 100%;
   height: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
   overflow: hidden; }
   .carsoule .center__title {
-    margin-top: 6rem; }
+    margin-top: 4rem; }
     .carsoule .center__title h3 {
       text-transform: uppercase;
       font-size: 1.5rem;
       font-weight: 400;
       text-align: center; }
   .carsoule__container {
-    position: relative;
     width: 100%;
     height: 100%;
-    transition: all .5s ease-in-out; }
+    transition: all .5s ease-in-out;
+    background-color: hotpink; }
   .carsoule__slider {
     position: absolute;
+    display: flex;
     width: 100%;
-    height: 100%; }
+    height: 100%;
+    justify-content: center;
+    align-items: center; }
   .carsoule__content {
-    padding: 2rem 4rem;
-    margin-top: 4rem; }
+    padding: 2rem 4rem; }
     .carsoule__content-text {
       font-size: 2rem;
       font-style: italic;
@@ -712,18 +710,15 @@ a {
       @media (max-width: 56.25em) {
         .header .main-nav__lists {
           position: absolute;
-          left: 0;
-          top: -100vh;
-          width: 100vw;
+          top: 6rem;
+          left: -100vw;
+          width: 100%;
           height: 100vh;
           background-color: #16162d;
-          border-bottom-right-radius: 100%;
-          border-bottom-left-radius: 100%;
-          transition: all 650ms cubic-bezier(1, 0, 0, 1);
+          transition: all 750ms cubic-bezier(1, 0, 0, 1);
           flex-direction: column; }
           .header .main-nav__lists.change {
-            top: 0;
-            border-radius: initial; } }
+            left: 0; } }
       .header .main-nav__lists li:nth-of-type(1),
       .header .main-nav__lists li:nth-of-type(6) {
         margin-left: auto; }
@@ -753,6 +748,15 @@ a {
       @media screen and (max-width: 1080px) {
         .header .main-nav__items {
           margin-right: 2rem; } }
+      @media (max-width: 56.25em) {
+        .header .main-nav__items {
+          display: inline-block;
+          padding-left: 6rem;
+          padding-bottom: 1rem; }
+          .header .main-nav__items:not(:last-child) {
+            border-bottom: 1px solid #eee;
+            margin-top: 1rem;
+            margin-bottom: 2rem; } }
     .header .main-nav__links:link, .header .main-nav__links:visited {
       position: relative;
       color: inherit;
@@ -765,7 +769,9 @@ a {
       transition: al .4s ease-out; }
       @media (max-width: 56.25em) {
         .header .main-nav__links:link, .header .main-nav__links:visited {
-          padding: 5rem 0 5rem 5rem; } }
+          color: #f4f4f4; }
+          .header .main-nav__links:link:hover, .header .main-nav__links:visited:hover {
+            color: #E76F51; } }
     .header .main-nav__links:after {
       content: "";
       position: absolute;
@@ -813,12 +819,19 @@ a {
     border-radius: 2rem; }
     .menuToggler .bar:not(:last-child) {
       margin-bottom: 1rem; }
+  .menuToggler .bar.half {
+    width: 50%; }
+  .menuToggler .bar.start {
+    transform-origin: right;
+    transition: all 650ms cubic-bezier(0.54, -0.81, 0.57, 0.57); }
+  .menuToggler .bar.end {
+    transform-origin: left;
+    align-self: flex-end;
+    transition: all 650ms cubic-bezier(0.54, -0.81, 0.57, 0.57); }
   .menuToggler .change .bar.start {
-    transform: rotate(45deg) translate(5px, 7px); }
-  .menuToggler .change .bar.middle {
-    opacity: 0; }
+    transform: rotate(45deg) translateX(0.8rem); }
   .menuToggler .change .bar.end {
-    transform: rotate(-45deg) translate(-7px, -8px); }
+    transform: rotate(-45deg) translateX(-0.8rem); }
 
 .about {
   background-color: set-background(#fff);
