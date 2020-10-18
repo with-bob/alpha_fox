@@ -96,7 +96,8 @@ body {
   font-size: 1.6rem;
   line-height: 1.4;
   background-color: #fff;
-  color: #333; }
+  color: #333;
+  overflow-x: hidden; }
 
 img {
   width: 100%; }
@@ -480,8 +481,6 @@ a {
     border: 2px solid #0470DC;
     background-color: transparent;
     color: #666; }
-    .btn.btn-cta:hover i {
-      margin-left: .1rem; }
     .btn.btn-cta:hover {
       background-color: #0470DC;
       color: #fff; }
@@ -498,8 +497,8 @@ a {
 
 .banner {
   position: relative;
-  background: url("/dist/images/banner.jpg") no-repeat center center/cover;
-  background-attachment: fixed;
+  background: url("/dist/images/banner.jpg");
+  background-size: cover;
   width: 100%;
   height: 55rem; }
   .banner::before {
@@ -795,41 +794,44 @@ a {
 
 .menuToggler {
   cursor: pointer;
-  width: 6rem;
-  height: 5rem;
-  background-color: #5f5f5f;
+  width: 4.5rem;
+  height: 4rem;
   margin-left: 2rem;
-  display: flex;
-  flex-direction: column;
-  padding: 1rem;
+  padding: .8rem;
   transition: transform .4s ease-out;
   display: none;
-  z-index: 1000; }
+  z-index: 1000;
+  border-radius: 5px;
+  background-color: #ececec; }
   @media (max-width: 56.25em) {
     .menuToggler {
       display: block; } }
-  .menuToggler.change {
-    transform: rotate(180deg); }
-  .menuToggler .bar {
+  .menuToggler .hamburger,
+  .menuToggler .hamburger::before,
+  .menuToggler .hamburger::after {
     width: 100%;
-    height: 2px;
-    background-color: #fff;
-    border-radius: 2rem; }
-    .menuToggler .bar:not(:last-child) {
-      margin-bottom: 1rem; }
-  .menuToggler .bar.half {
-    width: 50%; }
-  .menuToggler .bar.start {
-    transform-origin: right;
-    transition: all 650ms cubic-bezier(0.54, -0.81, 0.57, 0.57); }
-  .menuToggler .bar.end {
-    transform-origin: left;
-    align-self: flex-end;
-    transition: all 650ms cubic-bezier(0.54, -0.81, 0.57, 0.57); }
-  .menuToggler .change .bar.start {
-    transform: rotate(45deg) translateX(0.8rem); }
-  .menuToggler .change .bar.end {
-    transform: rotate(-45deg) translateX(-0.8rem); }
+    height: 3px;
+    background-color: #53a325;
+    transition: all .4s ease; }
+  .menuToggler .hamburger {
+    margin-top: 1rem;
+    position: relative; }
+    .menuToggler .hamburger::before, .menuToggler .hamburger::after {
+      content: "";
+      position: absolute;
+      top: -.8rem; }
+    .menuToggler .hamburger::after {
+      top: .8rem; }
+
+.change .hamburger {
+  background-color: transparent;
+  transform: rotate(450deg); }
+
+.change .hamburger::before {
+  transform: rotate(45deg) translate(5px, 5px); }
+
+.change .hamburger::after {
+  transform: rotate(-45deg) translate(6px, -5px); }
 
 .about {
   background-color: set-background(#fff);

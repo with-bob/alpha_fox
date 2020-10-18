@@ -123,3 +123,8 @@
     });
   });
 })();
+const banner = document.getElementById('banner');
+window.addEventListener('scroll', () =>{
+  let offset = window.pageYOffset;
+  banner.style.backgroundPositionY = offset * 0.6 + "px";
+});
